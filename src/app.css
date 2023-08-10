@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Regular";
+  src: url("/fonts/regular/OpenSauceOne-Medium.eot");
+  src: url("/fonts/regular/OpenSauceOne-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/regular/OpenSauceOne-Medium.woff2") format("woff2"),
+    url("/fonts/regular/OpenSauceOne-Medium.woff") format("woff"),
+    url("/fonts/regular/OpenSauceOne-Medium.ttf") format("truetype");
+  font-weight: 400; /* for bold, change to 900*/
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bold";
+  src: url("/fonts/bold/BebasNeue-Regular.eot");
+  src: url("/fonts/bold/BebasNeue-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/bold/BebasNeue-Regular.woff2") format("woff2"),
+    url("/fonts/bold/BebasNeue-Regular.woff") format("woff"),
+    url("/fonts/bold/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: 400; /* for bold, change to 900*/
+  font-style: normal;
+}
+
+* {
+  font-family: "Regular";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+html {
+  font-size: 0.69444vw;
+  overscroll-behavior: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: #777;
+  font-weight: 500;
+  min-height: 100vh;
+  font-size: 1.6rem;
+  background: #111;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Bold";
+  font-weight: normal;
+}
+
+.wrap {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.very-big-font {
+  font-size: 20em;
+  letter-spacing: -17px;
+  line-height: 0.85;
+}
+
+.very-big-font:hover {
+  color: #aaa;
+}
+
+.no-hover-effect:hover {
+  color: inherit !important;
+}

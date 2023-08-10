@@ -1,4 +1,8 @@
-<h1 class="text-3xl text-red-500">Welcome to SvelteKit, thanks!</h1>
+<script lang="ts">
+  import Banner from "../widgets/Banner.svelte";
+</script>
+
+<Banner />
 <p>
   Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
 </p>
