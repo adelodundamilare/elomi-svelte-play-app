@@ -14,9 +14,10 @@ export default {
     },
   },
   variants: {
-    extends: {
-      translate: ["group-hover"],
-    },
+    translate: ["group-hover"],
+    textColor: ["group-hover"],
+    // extends: {
+    // },
   },
   plugins: [],
 };

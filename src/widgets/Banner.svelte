@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount, getContext } from "svelte";
+  import Button from "./Button.svelte";
   const { getScroll }: any = getContext("locomotiveScroll");
   const scrollInstance = getScroll();
 
@@ -9,17 +10,18 @@
   };
 
   let hyphenBar: any;
+  let width: number;
 
   onMount(() => {
     scrollInstance.on("scroll", (obj: any) => {
       // Find distance between scroll updates
       scroll.current = obj.scroll.y;
-      const distance = scroll.current - scroll.cache;
+      width = scroll.current - scroll.cache;
       scroll.cache = scroll.current;
-      console.log("something is happening here", distance);
+      console.log("something is happening here", width);
 
       //
-      hyphenBar.style.transform = `${distance}px`;
+      hyphenBar.style.transform = `${width}px`;
     });
   });
 </script>
@@ -42,13 +44,7 @@
         <span class="block">Available for Freelance</span>
         <span class="block">Work from march 2023</span>
       </div>
-      <button
-        class="rounded-full transition-all overflow-hidden duration-300 relative flex flex-col items-center border text-3xl ml-10 text-primary uppercase px-4 py-2 hover:text-black hover:bg-accent"
-        ><span class="group-hover:-translate-y-12">contact</span><span
-          class="font-bold absolute translate-y-8 group-hover:-translate-y-0 text-red-400"
-          >contact</span
-        ></button
-      >
+      <Button text="contact" />
     </div>
   </div>
 </section>
@@ -57,36 +53,38 @@
   <div class="flex items-center">
     <!--  justify-center -->
     <div class="flex p-0 m-0">
-      <h1 class="very-big-font">F</h1>
-      <h1 class="very-big-font">R</h1>
-      <h1 class="very-big-font">O</h1>
-      <h1 class="very-big-font">N</h1>
-      <h1 class="very-big-font">T</h1>
+      <h1 class="very-big-font">D</h1>
+      <h1 class="very-big-font">A</h1>
+      <h1 class="very-big-font">M</h1>
+      <h1 class="very-big-font">I</h1>
+      <!-- <h1 class="very-big-font">T</h1> -->
     </div>
     <div class="flex p-0 m-0 mx-20">
       <div
-        class="block bg-secondary h-[30px] w-[330px]"
+        style="transform: scale(1.05, 1)"
+        class={`block bg-secondary h-[30px] w-[330px]`}
         bind:this={hyphenBar}
       />
       <!-- <div class="block bg-secondary h-[30px] w-[1080px]" /> -->
     </div>
     <div class="flex p-0 m-0">
+      <h1 class="very-big-font">L</h1>
+      <h1 class="very-big-font">A</h1>
+      <h1 class="very-big-font">R</h1>
       <h1 class="very-big-font">E</h1>
-      <h1 class="very-big-font">N</h1>
-      <h1 class="very-big-font">D</h1>
     </div>
   </div>
   <div class="flex">
     <div class="flex p-0 m-0">
+      <h1 class="very-big-font">A</h1>
       <h1 class="very-big-font">D</h1>
-      <h1 class="very-big-font">E</h1>
-      <h1 class="very-big-font">V</h1>
       <h1 class="very-big-font">E</h1>
       <h1 class="very-big-font">L</h1>
       <h1 class="very-big-font">O</h1>
-      <h1 class="very-big-font">P</h1>
-      <h1 class="very-big-font">E</h1>
-      <h1 class="very-big-font">R</h1>
+      <h1 class="very-big-font">D</h1>
+      <h1 class="very-big-font">U</h1>
+      <h1 class="very-big-font">N</h1>
+      <h1 class="very-big-font">.</h1>
     </div>
     <div class="px-5 text-primary ml-24 flex flex-col pb-12">
       <div>
@@ -100,6 +98,7 @@
         <svg
           width="20"
           height="21"
+          class="transition-all"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           ><path

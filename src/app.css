@@ -51,7 +51,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+.bold-font {
   font-family: "Bold";
   font-weight: normal;
 }
@@ -59,6 +60,11 @@ h3 {
 .wrap {
   padding-left: 4rem;
   padding-right: 4rem;
+}
+
+.wrap-m {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 .very-big-font {
@@ -73,4 +79,21 @@ h3 {
 
 .no-hover-effect:hover {
   color: inherit !important;
+}
+
+.anim-marquee {
+  animation: marquee 25s linear infinite;
+  /* animation: marquee duration timing-function delay iteration-count direction fill-mode; */
+  /* transition: all;
+  transition-duration: ; */
+}
+
+.anim-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
