@@ -73,6 +73,10 @@ h3,
   line-height: 0.85;
 }
 
+a {
+  color: #777;
+}
+
 .very-big-font:hover {
   color: #aaa;
 }

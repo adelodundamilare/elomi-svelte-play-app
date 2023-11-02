@@ -7,7 +7,7 @@
 </script>
 
 <Banner />
-<Recognition />
 <Project />
+<Recognition />
 <Call2Action />
 <Footer />

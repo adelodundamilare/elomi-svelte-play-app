@@ -55,21 +55,15 @@
 
 <section data-scroll-section>
   <div class="wrap grid grid-cols-3 py-10 text-sm mb-20">
-    <div class="flex justify-between">
-      <div class="uppercase text-primary">
-        <span class="block">Damilare</span>
-        <span class="block">Adelodun</span>
-      </div>
-      <div class="uppercase">
-        <span class="block">Frontend Developer</span>
-        <span class="block">FOLIO/2021 - 2023</span>
-      </div>
+    <div class="uppercase">
+      <span class="block">Software Engineer</span>
+      <span class="block">ELOMI/2021 - 2023</span>
     </div>
     <div />
     <div class="flex items-center justify-end">
       <div class="uppercase">
         <span class="block">Available for Freelance</span>
-        <span class="block">Work from march 2023</span>
+        <span class="block">Work from Dec. 2023</span>
       </div>
       <Button text="contact" />
     </div>

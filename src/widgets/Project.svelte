@@ -1,43 +1,50 @@
 <script lang="ts">
   import ProjectItem from "../components/Project.component.svelte";
+  import Contributions from "./Contributions.svelte";
   interface IProject {
     title: string;
     category: string;
     isReversed?: boolean;
   }
+
+  const groupA: IProject[] = [];
+
+  const groupB: IProject[] = [];
+
   const projects: IProject[] = [
     {
-      title: "Toe Arts - Portfolio For S.Owonti",
-      category: "UI Development/\nProduct Engineering",
+      title: "Money In Minute - Landing Page",
+      category: "Web Development/\nWordpress",
     },
     {
-      title: "ColorNG - Cool Color Palette",
-      category: "UI Development/\nFirebase",
+      title: "Mualine - Vendor Booking App",
+      category: "Web Development/\nLaravel",
     },
     {
-      title: "Toe Arts - Portfolio For S.Owonti",
-      category: "UI Development/\nProduct Engineering",
+      title: "Business Africa Online - News Mag",
+      category: "Web Development/\nWordpress",
     },
     {
-      title: "ColorNG - Cool Color Palette",
-      category: "UI Development/\nFirebase",
-    },
-    {
-      title: "Toe Arts - Portfolio For S.Owonti",
-      category: "UI Development/\nProduct Engineering",
-    },
-    {
-      title: "ColorNG - Cool Color Palette",
-      category: "UI Development/\nFirebase",
+      title: "OrewaCity - Real Estate Website",
+      category: "Web Development/\nWordpress",
     },
   ];
+
+  projects.forEach((item, index) => {
+    if (index % 2 === 0) {
+      groupA.push(item);
+    } else {
+      groupB.push(item);
+    }
+  });
 </script>
 
 <section data-scroll-section>
-  {#each projects as { title, category }, index}
-    <!-- {#if projects.length / 2 == index}
-      <Recognition />
-    {/if} -->
+  {#each groupA as { title, category }, index}
+    <ProjectItem isReversed={index % 2 == 0} {title} {category} />
+  {/each}
+  <Contributions />
+  {#each groupB as { title, category }, index}
     <ProjectItem isReversed={index % 2 == 0} {title} {category} />
   {/each}
 </section>
