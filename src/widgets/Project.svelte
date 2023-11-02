@@ -1,14 +1,43 @@
 <script lang="ts">
-  export let name: string;
+  import ProjectItem from "../components/Project.component.svelte";
+  interface IProject {
+    title: string;
+    category: string;
+    isReversed?: boolean;
+  }
+  const projects: IProject[] = [
+    {
+      title: "Toe Arts - Portfolio For S.Owonti",
+      category: "UI Development/\nProduct Engineering",
+    },
+    {
+      title: "ColorNG - Cool Color Palette",
+      category: "UI Development/\nFirebase",
+    },
+    {
+      title: "Toe Arts - Portfolio For S.Owonti",
+      category: "UI Development/\nProduct Engineering",
+    },
+    {
+      title: "ColorNG - Cool Color Palette",
+      category: "UI Development/\nFirebase",
+    },
+    {
+      title: "Toe Arts - Portfolio For S.Owonti",
+      category: "UI Development/\nProduct Engineering",
+    },
+    {
+      title: "ColorNG - Cool Color Palette",
+      category: "UI Development/\nFirebase",
+    },
+  ];
 </script>
 
-<section data-scroll-section class="wrap">
-  <div class="w-full h-1 bg-primary" />
-  <div class="flex justify-around">
-    <div class="max-width-[100px] uppercase">Featured Projects(6)</div>
-    <div class="max-width-[100px] uppercase">
-      Art Direction/Web3 Development
-    </div>
-  </div>
-  <h3 class="uppercase hover:text-accent">{name}</h3>
+<section data-scroll-section>
+  {#each projects as { title, category }, index}
+    <!-- {#if projects.length / 2 == index}
+      <Recognition />
+    {/if} -->
+    <ProjectItem isReversed={index % 2 == 0} {title} {category} />
+  {/each}
 </section>

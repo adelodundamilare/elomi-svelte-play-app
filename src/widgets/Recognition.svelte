@@ -1,9 +1,26 @@
 <script lang="ts">
+  const items: string[] = [
+    "Awwwards - Site of the Day (x2)",
+    "Awwwards - Developer Award (x2)",
+    "Awwwards - Jury Member 2023",
+    "MUZLI",
+  ];
 </script>
 
 <section data-scroll-section class="max-w-[1000px] mx-auto mt-36 mb-[500px]">
   <div class="flex">
-    <div class="w-2/3" />
+    <div class="w-2/3">
+      <h5 class="uppercase text-sm mb-10">Awards X <br />Recognition</h5>
+      <div class="max-w-[450px]">
+        {#each items as item, index}
+          <p data-scroll class="border-t border-primary py-5 text-primary">
+            <span>
+              {item}
+            </span>
+          </p>
+        {/each}
+      </div>
+    </div>
     <div class="w-1/3">
       <div>
         <h5 class="uppercase text-sm mb-10">Interest</h5>
@@ -22,10 +39,10 @@
         <p class="text-primary">
           I listen to Electronic and Alt music all the time, you can see what
           I'm currently listening to on this <a
-            href="#"
+            href="https://google.com"
             class="text-secondary text-md hover:text-accent">MICROSITE</a
           >. I like traveling and good food (work with me so I can fund this).
-          <a class="text-secondary text-md hover:text-accent" href="#"
+          <a class="text-secondary text-md hover:text-accent" href="footer"
             >GET IN TOUCH</a
           > to know more about me.
         </p>

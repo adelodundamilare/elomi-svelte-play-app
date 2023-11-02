@@ -1,10 +1,21 @@
 <script lang="ts">
+  import { onMount } from "svelte";
   import Button from "./Button.svelte";
 
-  let todayDate = new Date().toLocaleTimeString([], { timeStyle: "short" });
+  let todayDate: any;
+
+  onMount(() => {
+    //intervals functions
+    const interval = setInterval(() => {
+      // $: todayDate = new Date().toLocaleTimeString([], { timeStyle: "short" });
+      todayDate = new Date().toLocaleTimeString([], { timeStyle: "short" });
+    }, 1000);
+    //If a function is returned from onMount, it will be called when the component is unmounted.
+    return () => clearInterval(interval);
+  });
 </script>
 
-<section data-scroll-section class="wrap w-full border-t-2 py-36">
+<section id="footer" data-scroll-section class="wrap w-full py-36">
   <p class="text-center text-6xl text-primary">adelodundamilare@gmail.com</p>
   <div class="flex items-center justify-between uppercase mt-32">
     <p>Lagos, NG <span class="text-primary">{todayDate}</span></p>

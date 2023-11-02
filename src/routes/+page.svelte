@@ -7,7 +7,7 @@
 </script>
 
 <Banner />
-<Project name="Jelly - NFT Marketplace Template" />
 <Recognition />
+<Project />
 <Call2Action />
 <Footer />

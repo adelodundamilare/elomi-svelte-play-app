@@ -69,7 +69,7 @@ h3,
 
 .very-big-font {
   font-size: 20em;
-  letter-spacing: -17px;
+  letter-spacing: -13px;
   line-height: 0.85;
 }
 
@@ -96,4 +96,19 @@ h3,
   100% {
     transform: translate3d(-50%, 0, 0);
   }
+}
+
+.swipe-up {
+  opacity: 0;
+  transform-origin: center top;
+  transform: translateY(100%) rotateX(-80deg);
+  transition: opacity 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.swipe-up.is-inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.1s;
+  transition-duration: 0.8s;
 }
