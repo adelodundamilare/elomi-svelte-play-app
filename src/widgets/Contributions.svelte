@@ -1,7 +1,6 @@
 <script></script>
 
 <section>
-  <div class="mx-10 h-[2px] w-full block bg-secondary" />
   <div class="h-screen flex items-center">
     <div class="m-auto">
       <p class="text-sm uppercase text-center mb-5">Community Contribution</p>

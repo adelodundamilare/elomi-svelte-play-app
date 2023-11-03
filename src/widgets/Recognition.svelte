@@ -12,17 +12,18 @@
     <div class="w-2/3">
       <h5 class="uppercase text-sm mb-10">Awards X <br />Recognition</h5>
       <div class="max-w-[450px]">
-        {#each items as item, index}
-          <p data-scroll class="border-t border-primary py-5 text-primary">
-            <span>
-              {item}
-            </span>
+        {#each items as item}
+          <p
+            data-scroll
+            class="border-t border-primary py-5 text-primary the-item"
+          >
+            {item}
           </p>
         {/each}
       </div>
     </div>
     <div class="w-1/3">
-      <div>
+      <div data-scroll class="the-item">
         <h5 class="uppercase text-sm mb-10">Interest</h5>
         <p class="text-primary">
           Art Direction, Brand Strategy, Creative Development, E-Commerce,
@@ -34,7 +35,7 @@
           target="_blank">See my Github</a
         >
       </div>
-      <div class="mt-24">
+      <div data-scroll class="mt-24 the-item">
         <h5 class="uppercase text-sm mb-10">Icebreaker</h5>
         <p class="text-primary">
           I listen to Electronic and Alt music all the time, you can see what

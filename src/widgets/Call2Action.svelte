@@ -8,14 +8,10 @@
   </p>
   <div class="wrap-m w-full h-[1px] bg-secondary" />
   <div class="anim-marquee w-[max-content] flex group">
-    <p
-      class="uppercase text-[10em] bold-font tracking-tighter mr-2 group-hover:text-accent"
-    >
+    <p class="uppercase text-[10em] bold-font mr-2 group-hover:text-accent">
       LET'S TALK — LET'S COLLABORATE — SAY HELLO — WANNA BE STARTING SOMETHING?
     </p>
-    <p
-      class="uppercase text-[10em] bold-font tracking-tighter group-hover:text-accent"
-    >
+    <p class="uppercase text-[10em] bold-font group-hover:text-accent">
       LET'S TALK — LET'S COLLABORATE — SAY HELLO — WANNA BE STARTING SOMETHING?
     </p>
   </div>

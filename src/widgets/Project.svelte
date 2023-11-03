@@ -41,10 +41,20 @@
 
 <section data-scroll-section>
   {#each groupA as { title, category }, index}
-    <ProjectItem isReversed={index % 2 == 0} {title} {category} />
+    <ProjectItem
+      isReversed={index % 2 == 0}
+      {title}
+      {category}
+      showBottomBorder={index === groupA.length - 1}
+    />
   {/each}
   <Contributions />
   {#each groupB as { title, category }, index}
-    <ProjectItem isReversed={index % 2 == 0} {title} {category} />
+    <ProjectItem
+      isReversed={index % 2 == 0}
+      {title}
+      {category}
+      showBottomBorder={index === groupB.length - 1}
+    />
   {/each}
 </section>

@@ -16,15 +16,27 @@
 
 @font-face {
   font-family: "Bold";
+  src: url("/fonts/tt/TTTrailersTrial-Db.eot");
+  src: url("/fonts/tt/TTTrailersTrial-Db.eot?#iefix")
+      format("embedded-opentype"),
+    url("/fonts/tt/TTTrailersTrial-Db.woff2") format("woff2"),
+    url("/fonts/tt/TTTrailersTrial-Db.woff") format("woff"),
+    url("/fonts/tt/TTTrailersTrial-Db.ttf") format("truetype");
+  font-weight: 400; /* for bold, change to 900*/
+  font-style: normal;
+}
+/*
+@font-face {
+  font-family: "Bold";
   src: url("/fonts/bold/BebasNeue-Regular.eot");
   src: url("/fonts/bold/BebasNeue-Regular.eot?#iefix")
       format("embedded-opentype"),
     url("/fonts/bold/BebasNeue-Regular.woff2") format("woff2"),
     url("/fonts/bold/BebasNeue-Regular.woff") format("woff"),
     url("/fonts/bold/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: 400; /* for bold, change to 900*/
+  font-weight: 400; /* for bold, change to 900
   font-style: normal;
-}
+} */
 
 * {
   font-family: "Regular";
@@ -69,12 +81,16 @@ h3,
 
 .very-big-font {
   font-size: 20em;
-  letter-spacing: -13px;
+  /* letter-spacing: -13px; */
   line-height: 0.85;
 }
 
 a {
   color: #777;
+}
+
+a:hover {
+  color: #e7f870;
 }
 
 .very-big-font:hover {
@@ -115,4 +131,39 @@ a {
   transform: none;
   transition-delay: 0.1s;
   transition-duration: 0.8s;
+}
+
+.bar {
+  width: 100%;
+  position: relative;
+  transition: all ease-in 0.5s;
+}
+
+.from-left {
+  left: -100%;
+}
+
+.from-left.is-inview {
+  left: 0;
+}
+
+.from-right {
+  right: -100%;
+}
+
+.from-right.is-inview {
+  right: 0;
+}
+
+.the-item {
+  transform: translateY(60px);
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.the-item.is-inview {
+  transform: none;
+  opacity: 1;
+  transition-delay: 0.1s;
 }
