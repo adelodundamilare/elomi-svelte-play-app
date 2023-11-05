@@ -151,15 +151,17 @@
     </div>
   </div>
   <!-- mobile -->
-  <div data-scroll class="swipe-up sm:block hidden">
-    <h1 class="very-big-font">DAMI</h1>
-    <div class="flex p-0 m-0 items-center">
-      <div class={`block mr-10 bg-secondary h-[20px] w-[130px]`} />
-      <h1 class="very-big-font">LARE</h1>
+  <div data-scroll class="sm:block hidden">
+    <div data-scroll class="swipe-up">
+      <h1 class="very-big-font">DAMI</h1>
+      <div data-scroll class="flex p-0 m-0 items-center">
+        <div class={`block mr-10 bg-secondary h-[20px] w-[130px]`} />
+        <h1 class="very-big-font">LARE</h1>
+      </div>
     </div>
-    <h1 class="very-big-font sm:break-words">ADELODUN</h1>
+    <h1 data-scroll class="swipe-up very-big-font sm:break-words">ADELODUN</h1>
   </div>
-  <div data-scroll class="swipe-up max-w-[280px] ml-auto sm:block hidden">
+  <div data-scroll class="swipe-up max-w-[250px] ml-auto sm:block hidden">
     <div class="text-primary pb-12">
       <span class="text-secondary">ABOUT</span> I am a developer based in Lagos,
       Nigeria focused on creating interactive digital experiences on the web and

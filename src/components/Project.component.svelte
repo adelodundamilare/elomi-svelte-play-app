@@ -24,7 +24,7 @@
   >
     {category}
   </p>
-  <div class="w-[max-content] sm:w-[350px] sm:flex-col flex group py-10">
+  <div class="w-[max-content] sm:w-[300px] sm:flex-col flex group py-10">
     <a
       href={link}
       data-scroll
@@ -38,7 +38,7 @@
     </a>
     <a
       href={link}
-      class="border-2 border-secondary rounded-full ml-auto hidden sm:inline-block text-primary text-3xl px-8 py-2 uppercase"
+      class="border-2 border-secondary rounded-full ml-auto hidden sm:inline-block text-primary text-3xl px-8 py-4 uppercase"
       >Visit Site
       <i class="las la-long-arrow-alt-right -rotate-45" /></a
     >
