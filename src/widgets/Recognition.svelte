@@ -7,9 +7,12 @@
   ];
 </script>
 
-<section data-scroll-section class="max-w-[1000px] mx-auto mt-36 mb-[500px]">
-  <div class="flex">
-    <div class="w-2/3">
+<section
+  data-scroll-section
+  class="max-w-[1000px] mx-auto sm:m-10 mt-36 mb-[500px]"
+>
+  <div class="flex sm:flex-col">
+    <div class="w-2/3 sm:w-full sm:mb-20">
       <h5 class="uppercase text-sm mb-10">Awards X <br />Recognition</h5>
       <div class="max-w-[450px]">
         {#each items as item}
@@ -22,7 +25,7 @@
         {/each}
       </div>
     </div>
-    <div class="w-1/3">
+    <div class="w-1/3 sm:w-full">
       <div data-scroll class="the-item">
         <h5 class="uppercase text-sm mb-10">Interest</h5>
         <p class="text-primary">

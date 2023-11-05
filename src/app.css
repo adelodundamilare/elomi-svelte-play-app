@@ -25,18 +25,6 @@
   font-weight: 400; /* for bold, change to 900*/
   font-style: normal;
 }
-/*
-@font-face {
-  font-family: "Bold";
-  src: url("/fonts/bold/BebasNeue-Regular.eot");
-  src: url("/fonts/bold/BebasNeue-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/bold/BebasNeue-Regular.woff2") format("woff2"),
-    url("/fonts/bold/BebasNeue-Regular.woff") format("woff"),
-    url("/fonts/bold/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: 400; /* for bold, change to 900
-  font-style: normal;
-} */
 
 * {
   font-family: "Regular";
@@ -51,6 +39,12 @@ html {
   overscroll-behavior: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 1.81818vw;
+  }
 }
 
 body {
@@ -81,8 +75,15 @@ h3,
 
 .very-big-font {
   font-size: 20em;
-  /* letter-spacing: -13px; */
   line-height: 0.85;
+}
+
+@media (max-width: 550px) {
+  .very-big-font {
+    font-size: 17em;
+    line-height: 0.8;
+    letter-spacing: -6px;
+  }
 }
 
 a {
@@ -103,9 +104,12 @@ a:hover {
 
 .anim-marquee {
   animation: marquee 25s linear infinite;
-  /* animation: marquee duration timing-function delay iteration-count direction fill-mode; */
-  /* transition: all;
-  transition-duration: ; */
+}
+
+@media (max-width: 550px) {
+  .anim-marquee {
+    animation: marquee 20s linear infinite;
+  }
 }
 
 .anim-marquee:hover {
