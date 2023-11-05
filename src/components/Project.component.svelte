@@ -24,7 +24,11 @@
   >
     {category}
   </p>
-  <div class="w-[max-content] sm:w-[300px] sm:flex-col flex group py-10">
+  <div
+    class={`w-[max-content]  ${
+      isReversed ? "sm:ml-auto" : ""
+    } sm:w-[300px] sm:flex-col flex group py-10`}
+  >
     <a
       href={link}
       data-scroll
@@ -32,7 +36,7 @@
       data-scroll-speed={`${isReversed ? "-" : ""}8`}
       class={`uppercase sm:leading-[.9] ${
         isReversed ? "text-right" : "text-left"
-      } text-[10em] sm:text-[80px] bold-font mr-2 group-hover:text-accent`}
+      } text-[10em] sm:text-[80px] bold-font mr-2 sm:mx-10 group-hover:text-accent`}
     >
       {title}
     </a>
