@@ -6,7 +6,9 @@
     Got a question, proposal or project or want to work together on something?
     Feel free to reach out.
   </p>
-  <div class="wrap-m w-full h-[2px] bg-secondary" />
+  <div data-scroll-speed="-8" class="h-[2px] m-auto w-[95%] overflow-hidden">
+    <div data-scroll class={`from-left block h-[2px] bg-secondary bar`} />
+  </div>
   <div class="anim-marquee sm:my-8 w-[max-content] flex group">
     <p
       class="uppercase sm:leading-[.9] sm:text-[8em] text-[10em] bold-font mr-2 group-hover:text-accent"
@@ -19,5 +21,7 @@
       LET'S TALK — LET'S COLLABORATE — SAY HELLO — WANNA BE STARTING SOMETHING?
     </p>
   </div>
-  <div class="wrap-m w-full h-[2px] block bg-secondary" />
+  <div data-scroll-speed="8" class="h-[2px] m-auto w-[95%] overflow-hidden">
+    <div data-scroll class={`from-right block h-[2px] bg-secondary bar`} />
+  </div>
 </section>
