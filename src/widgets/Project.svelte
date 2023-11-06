@@ -24,6 +24,11 @@
       link: "https://mualine.ng/",
     },
     {
+      title: "Arnergy Bluebox - 3D Model",
+      category: "3D Exploration/\nCreative Development",
+      link: "https://arnergy-3d-bluebox.netlify.app/",
+    },
+    {
       title: "Business Africa Online - News Mag",
       category: "Web Development/\nWordpress",
       link: "http://businessafricaonline.com/",
