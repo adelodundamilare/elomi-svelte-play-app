@@ -23,7 +23,6 @@
 
   const damiFunc = (progress: number) => {
     dami.style.transform = `translateX(${calcTextSwipe(progress, true)})`;
-    console.log({ dami });
   };
 
   const lareFunc = (progress: number) => {
