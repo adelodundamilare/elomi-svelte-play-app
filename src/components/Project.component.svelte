@@ -40,9 +40,11 @@
     >
       {title}
     </a>
+  </div>
+  <div class=" hidden sm:flex mb-10 mr-10">
     <a
       href={link}
-      class="border-2 border-secondary rounded-full ml-auto hidden sm:inline-block text-primary text-3xl px-8 py-4 uppercase"
+      class="border-2 border-secondary rounded-full ml-auto text-primary text-3xl px-8 py-4 uppercase"
       >Visit Site
       <i class="las la-long-arrow-alt-right -rotate-45" /></a
     >
