@@ -7,7 +7,7 @@
         Community Contribution
       </p>
       <p
-        class="text-5xl sm:text-left sm:text-[32px] sm:leading-tight max-w-[900px] text-center leading-[3.5rem] text-primary"
+        class="text-5xl sm:text-left sm:leading-tight max-w-[900px] text-center leading-[3.5rem] text-primary"
       >
         I have worked on some tools and frameworks; mostly for corporate
         organizations and individuals like myself, it includes <a

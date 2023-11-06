@@ -31,6 +31,7 @@
   >
     <a
       href={link}
+      target="_blank"
       data-scroll
       data-scroll-direction="horizontal"
       data-scroll-speed={`${isReversed ? "-" : ""}8`}
@@ -44,6 +45,7 @@
   <div class=" hidden sm:flex mb-10 mr-10">
     <a
       href={link}
+      target="_blank"
       class="border-2 border-secondary rounded-full ml-auto text-primary text-3xl px-8 py-4 uppercase"
       >Visit Site
       <i class="las la-long-arrow-alt-right -rotate-45" /></a
