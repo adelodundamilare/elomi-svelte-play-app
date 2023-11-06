@@ -4,25 +4,16 @@
 
 @font-face {
   font-family: "Regular";
-  src: url("/fonts/regular/OpenSauceOne-Medium.eot");
-  src: url("/fonts/regular/OpenSauceOne-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/regular/OpenSauceOne-Medium.woff2") format("woff2"),
-    url("/fonts/regular/OpenSauceOne-Medium.woff") format("woff"),
-    url("/fonts/regular/OpenSauceOne-Medium.ttf") format("truetype");
-  font-weight: 400; /* for bold, change to 900*/
+  src: url("/fonts/regular/OpenSauceOne-Medium.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Bold";
   src: url("/fonts/tt/TTTrailersTrial-Db.eot");
-  src: url("/fonts/tt/TTTrailersTrial-Db.eot?#iefix")
-      format("embedded-opentype"),
-    url("/fonts/tt/TTTrailersTrial-Db.woff2") format("woff2"),
-    url("/fonts/tt/TTTrailersTrial-Db.woff") format("woff"),
-    url("/fonts/tt/TTTrailersTrial-Db.ttf") format("truetype");
-  font-weight: 400; /* for bold, change to 900*/
+  src: url("/fonts/tt/TTTrailersTrial-Db.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
 }
 
