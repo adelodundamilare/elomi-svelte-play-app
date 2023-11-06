@@ -151,8 +151,8 @@
     </div>
   </div>
   <!-- mobile -->
-  <div>
-    <div data-scroll class="swipe-up sm:block hidden">
+  <div class="sm:block hidden">
+    <div data-scroll class="swipe-up">
       <h1 class="very-big-font">DAMI</h1>
       <div data-scroll class="flex p-0 m-0 items-center">
         <div class={`block mr-10 bg-secondary h-[20px] w-[130px]`} />
