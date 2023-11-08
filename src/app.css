@@ -6,6 +6,7 @@
   font-family: "Regular";
   src: url("/fonts/regular/OpenSauceOne-Medium.woff2") format("woff2");
   font-weight: 400;
+  font-display: block;
   font-style: normal;
 }
 
@@ -14,6 +15,7 @@
   src: url("/fonts/tt/TTTrailersTrial-Db.eot");
   src: url("/fonts/tt/TTTrailersTrial-Db.woff2") format("woff2");
   font-weight: 400;
+  font-display: block;
   font-style: normal;
 }
 
@@ -147,7 +149,7 @@ a:hover {
 .bar {
   width: 100%;
   position: relative;
-  transition: all ease-in 0.5s;
+  transition: all ease-in 1.5s;
 }
 
 .from-left {
