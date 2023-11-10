@@ -180,3 +180,7 @@ a:hover {
   opacity: 1;
   transition-delay: 0.1s;
 }
+
+.font-frances {
+  font-family: "Fraunces";
+}

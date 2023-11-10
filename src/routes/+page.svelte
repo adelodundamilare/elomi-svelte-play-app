@@ -7,7 +7,7 @@
   import Recognition from "../widgets/Recognition.svelte";
 </script>
 
-<!-- <Preloader /> -->
+<Preloader />
 <Banner />
 <Project />
 <Recognition />
