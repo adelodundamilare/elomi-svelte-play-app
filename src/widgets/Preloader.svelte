@@ -1,165 +1,31 @@
+<script context="module" lang="ts">
+  export const removePreloader = () => {
+    gsap.to("#preloader", {
+      display: "none",
+    });
+  };
+</script>
+
 <script lang="ts">
-  import { onMount } from "svelte";
   import gsap from "gsap";
-  //   import TextPlugin from "gsap/TextPlugin";
-
-  //   gsap.registerPlugin(TextPlugin);
-
-  let current3: any;
-  let current2: any;
-  let current1: any;
-
-  let next3: any;
-  let next2: any;
-  let next1: any;
-
-  const progressChunk: string[] = [
-    "0",
-    "5",
-    "10",
-    "15",
-    "21",
-    "26",
-    "31",
-    "36",
-    "42",
-    "47",
-    "52",
-    "57",
-    "63",
-    "68",
-    "73",
-    "78",
-    "84",
-    "89",
-    "94",
-    "100",
-  ];
+  import { onMount } from "svelte";
+  import Countdown, {
+    progressCountDown,
+  } from "../components/preloader/countdown.svelte";
+  import Slider from "../components/preloader/slider.svelte";
 
   onMount(() => {
-    const tl = gsap.timeline({
-      onComplete: () => {},
-    });
-
-    let current: number = 0;
-    const intervalDuration: number = 350;
-    const ease: string = "none";
-    const delay: number = 0.0;
-    const tweenDuration: number = intervalDuration / 1000;
-
-    let intervalId = setInterval(() => {
-      current++;
-      const item = progressChunk[current];
-
-      if (!item) {
-        clearInterval(intervalId);
-        return;
-      }
-
-      if (item.length === 1) {
-        tl.call(
-          () => {
-            next1.innerText = item;
-            current1.innerText = item;
-          },
-          []
-          //   ">"
-        );
-        tl.to([current1, next1], {
-          y: -100,
-          opacity: 1,
-          duration: tweenDuration,
-          delay: delay,
-          ease: ease,
-          onComplete: () => {},
-        });
-      } else if (item.length === 2) {
-        tl.call(
-          () => {
-            next1.innerText = item[1];
-            next2.innerText = item[0];
-            current1.innerText = item[1];
-            current2.innerText = item[0];
-          },
-          []
-          //   ">"
-        );
-        tl.to([current1, current2, next1, next2], {
-          y: -100,
-          opacity: 1,
-          delay: delay,
-          duration: tweenDuration,
-          clearProps: "all",
-          ease: ease,
-        });
-      } else if (item.length === 3) {
-        tl.call(
-          () => {
-            next1.innerText = item[2];
-            next2.innerText = item[1];
-            next3.innerText = item[0];
-          },
-          []
-          //   ">"
-        );
-        tl.to([current1, current2, current3, next1, next2, next3], {
-          y: -100,
-          opacity: 1,
-          delay: delay,
-          duration: tweenDuration,
-          ease: ease,
-        });
-      }
-    }, intervalDuration);
+    progressCountDown();
   });
 </script>
 
-<div class="w-screen h-screen fixed z-10 bg-black overflow-hidden">
-  <div class="w-full h-full flex items-center justify-center">
-    <div class="relative overflow-hidden">
-      <h2 class="invisible">
-        <span class="text-[100px] leading-none font-frances text-white">'</span>
-        <span class="text-[100px] leading-none font-frances text-white">0</span>
-        <span class="text-[100px] leading-none font-frances text-white">0</span>
-        <span class="text-[100px] leading-none font-frances text-white">0</span>
-      </h2>
-      <div class="absolute top-0 swipe-this">
-        <div class="flex">
-          <span class="text-[100px] leading-none font-frances text-white"
-            >'</span
-          >
-          <span
-            bind:this={current3}
-            class="text-[100px] leading-none font-frances text-white">0</span
-          >
-          <span
-            bind:this={current2}
-            class="text-[100px] leading-none font-frances text-white">0</span
-          >
-          <span
-            bind:this={current1}
-            class="text-[100px] leading-none font-frances text-white">0</span
-          >
-        </div>
-        <div class="flex">
-          <span class="text-[100px] leading-none font-frances text-white"
-            >'</span
-          >
-          <span
-            bind:this={next3}
-            class="text-[100px] leading-none font-frances text-white">0</span
-          >
-          <span
-            bind:this={next2}
-            class="text-[100px] leading-none font-frances text-white">2</span
-          >
-          <span
-            bind:this={next1}
-            class="text-[100px] leading-none font-frances text-white">1</span
-          >
-        </div>
-      </div>
-    </div>
+<div
+  id="preloader"
+  class="w-screen h-screen fixed z-10 bg-black overflow-hidden"
+>
+  <div class="w-full h-full flex items-center justify-center relative">
+    <div><Countdown /></div>
+    <div class="absolute"><Slider /></div>
   </div>
   <!--  -->
   <div class="absolute left-[100px] bottom-[100px]">
@@ -168,14 +34,3 @@
     </h3>
   </div>
 </div>
-
-<style>
-  .swipe-this {
-    transition: all ease-in-out 0.2s;
-    transform: translateY(0);
-  }
-  /* .swipe-this:hover {
-    opacity: 1;
-    transform: translateY(-100px);
-  } */
-</style>
