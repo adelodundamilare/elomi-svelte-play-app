@@ -3,4 +3,11 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [sveltekit()],
+  build: {
+    rollupOptions: {
+      external: [
+        "gsap", // ignore gsap
+      ],
+    },
+  },
 });
