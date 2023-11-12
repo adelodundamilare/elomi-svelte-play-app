@@ -1,7 +1,10 @@
 <script lang="ts">
   import { onMount, getContext } from "svelte";
+  import gsap from "gsap";
+  //
   import Button from "./Button.svelte";
   import BannerLink from "../components/banner-link.component.svelte";
+  //
   const { getScroll }: any = getContext("locomotiveScroll");
   const scrollInstance = getScroll();
 
@@ -29,8 +32,45 @@
     lare.style.transform = `translateX(${calcTextSwipe(progress)})`;
   };
 
+  const animateWithGsap = () => {
+    const tl = gsap.timeline({});
+    // animate top-bar
+    tl.to("#top-bar", {
+      y: 0,
+      opacity: 1,
+      delay: 0,
+      duration: 0.3,
+      ease: "none",
+    });
+    // animate mobile-banner
+    tl.to("#mobile-banner", {
+      y: 0,
+      opacity: 1,
+      delay: 0.2,
+      duration: 0.3,
+      ease: "none",
+    });
+    // animate firstname
+    tl.to("#firstname", {
+      y: 0,
+      opacity: 1,
+      delay: 0.2,
+      duration: 0.3,
+      ease: "none",
+    });
+    // animate lastname
+    tl.to("#lastname", {
+      y: 0,
+      opacity: 1,
+      delay: 0.2,
+      duration: 0.3,
+      ease: "none",
+    });
+  };
+
   onMount(() => {
     // check if is in view
+    animateWithGsap();
     scrollInstance.on("scroll", ({ limit, scroll }: any) => {
       const progress = (scroll.y / limit.y) * 10;
       scaleBarFunc(progress);
@@ -38,23 +78,13 @@
       lareFunc(progress);
     });
   });
-
-  // onMount(() => {
-  //   scrollInstance.on("scroll", (obj: any) => {
-  //     // Find distance between scroll updates
-  //     scroll.current = obj.scroll.y;
-  //     width = scroll.current - scroll.cache;
-  //     scroll.cache = scroll.current;
-  //     console.log("something is happening here", width);
-
-  //     //
-  //     hyphenBar.style.transform = `${width}px`;
-  //   });
-  // });
 </script>
 
-<section data-scroll-section>
-  <div data-scroll class="swipe-down wrap grid grid-cols-3 py-10 text-sm mb-20">
+<section>
+  <div
+    id="top-bar"
+    class="wrap grid grid-cols-3 py-10 text-sm mb-20 opacity-0 translate-y-[-100px]"
+  >
     <div class="uppercase">
       <span class="block">Software Engineer</span>
       <span class="block">ELOMI/2021 - 2023</span>
@@ -73,8 +103,8 @@
 </section>
 
 <section class="wrap -mt-10 mb-24" data-scroll-section>
-  <div class=" sm:hidden">
-    <div data-scroll class="swipe-up">
+  <div class="sm:hidden">
+    <div id="firstname" class="opacity-0 translate-y-[100px]">
       <div class="flex items-center justify-between w-full">
         <div bind:this={dami} class="flex p-0 m-0">
           <h1 class="very-big-font">D</h1>
@@ -94,7 +124,7 @@
         </div>
       </div>
     </div>
-    <div data-scroll class="swipe-up">
+    <div id="lastname" class="opacity-0 translate-y-[100px]">
       <div class="flex">
         <div class="flex p-0 m-0">
           <h1 class="very-big-font">A</h1>
@@ -151,23 +181,24 @@
   </div>
   <!-- mobile -->
   <div class="sm:block hidden">
-    <div data-scroll class="swipe-up">
+    <div id="mobile-banner" class="opacity-0 translate-y-[100px]">
       <h1 class="very-big-font">DAMI</h1>
-      <div data-scroll class="flex p-0 m-0 items-center">
+      <div class="flex p-0 m-0 items-center">
         <div class={`block mr-10 bg-secondary h-[20px] w-[130px]`} />
         <h1 class="very-big-font">LARE</h1>
       </div>
-    </div>
-    <h1 data-scroll class="swipe-up very-big-font sm:break-words">
-      ADE<br />LODUN
-    </h1>
-  </div>
-  <div data-scroll class="swipe-up max-w-[250px] ml-auto sm:block hidden">
-    <div class="text-primary pb-12">
-      <span class="text-secondary">ABOUT</span> I am a developer based in Lagos,
-      Nigeria focused on creating interactive digital experiences on the web and
-      mobile.<br /><br />I am a fast learner and can work with any tool, library
-      or programming language to get any kind of work done.
+      <h1 class="very-big-font sm:break-words">
+        ADE<br />LODUN
+      </h1>
+      <div class="max-w-[250px] ml-auto sm:block hidden">
+        <div class="text-primary pb-12">
+          <span class="text-secondary">ABOUT</span> I am a developer based in
+          Lagos, Nigeria focused on creating interactive digital experiences on
+          the web and mobile.<br /><br />I am a fast learner and can work with
+          any tool, library or programming language to get any kind of work
+          done.
+        </div>
+      </div>
     </div>
   </div>
 </section>
