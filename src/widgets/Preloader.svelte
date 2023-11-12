@@ -14,9 +14,9 @@
   id="preloader"
   class="w-screen h-screen fixed z-10 bg-black overflow-hidden"
 >
-  <div class="w-full h-full flex items-center justify-center relative">
-    <div><Countdown /></div>
-    <div class="absolute"><Slider /></div>
+  <div class="w-full h-full flex justify-center relative">
+    <div class="flex items-center justify-center"><Countdown /></div>
+    <div class="absolute m-10 top-0"><Slider /></div>
   </div>
   <!--  -->
   <div class="absolute sm:left-10 sm:bottom-10 left-[100px] bottom-[100px]">

@@ -18,7 +18,7 @@
   ];
 
   const computeMobileHeight = (): number => {
-    return 98 * (window.screen.height / 100);
+    return 85 * (window.screen.height / 100);
   };
 
   let isMobile = false;
@@ -85,7 +85,7 @@
 
 <div
   bind:this={body}
-  class={`w-[350px] sm:w-[96vw] relative opacity-0 h-[${height}px] sm:h-[98vh] bg-black overflow-hidden`}
+  class={`w-[350px] sm:w-full relative opacity-0 h-[${height}px] sm:h-[85vh] bg-black overflow-hidden`}
 >
   <div
     id="first-overlay"
