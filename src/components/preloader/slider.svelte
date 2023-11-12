@@ -18,7 +18,7 @@
   ];
 
   const computeMobileHeight = (): number => {
-    return 98 * (window.innerHeight / 100);
+    return 98 * (window.screen.height / 100);
   };
 
   let isMobile = false;
