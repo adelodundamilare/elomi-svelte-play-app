@@ -35,6 +35,7 @@
       if (count > 0) {
         tl.to(`#${item.id}`, {
           y: -500,
+          ease: "power3.in",
         });
       }
 
@@ -46,6 +47,7 @@
     tl.to("#first-overlay", {
       y: -500,
       duration: 1,
+      ease: "power3.in",
     });
   };
 
@@ -53,6 +55,7 @@
     tl.to("#last-overlay", {
       y: -500 * count,
       duration: 1,
+      ease: "power3.in",
 
       onComplete: () => {
         gsap.delayedCall(1, removePreloader);

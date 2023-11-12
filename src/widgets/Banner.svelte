@@ -39,6 +39,7 @@
       y: 0,
       opacity: 1,
       delay: 0,
+      // clearProps: "transform",
       duration: 0.3,
       ease: "none",
     });
@@ -80,7 +81,7 @@
   });
 </script>
 
-<section>
+<section data-scroll-section>
   <div
     id="top-bar"
     class="wrap grid grid-cols-3 py-10 text-sm mb-20 opacity-0 translate-y-[-100px]"
