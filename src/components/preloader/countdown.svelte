@@ -58,11 +58,22 @@
     });
   };
 
+  const animateShowDefault = (tl: gsap.core.Timeline) => {
+    tl.to("#defaultValue", {
+      opacity: 1,
+      delay: 0,
+      duration: 0.3,
+      ease: "none",
+    });
+  };
+
   export const progressCountDown = () => {
     const tl = gsap.timeline({});
 
     let current: number = 0;
     const intervalDuration: number = 200;
+
+    animateShowDefault(tl);
 
     let intervalId = setInterval(() => {
       current++;
@@ -125,7 +136,7 @@
 
 <div class="relative overflow-hidden">
   <div class="swipe-this">
-    <div class="flex">
+    <div id="defaultValue" class="flex opacity-0">
       <span class="text-[100px] leading-none font-frances text-white">'</span>
       <span class="invisible text-[100px] leading-none font-frances text-white"
         >0</span
