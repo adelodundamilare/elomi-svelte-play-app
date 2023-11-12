@@ -1,6 +1,5 @@
 <script lang="ts" context="module">
-  import * as main from "../../widgets/Preloader.svelte";
-  import { createEventDispatcher } from "svelte";
+  import { isLoadingPreloader } from "../../store";
   import gsap from "gsap";
 
   let body: any;
@@ -56,14 +55,13 @@
       duration: 1,
 
       onComplete: () => {
-        gsap.delayedCall(1, main.removePreloader);
+        gsap.delayedCall(1, removePreloader);
       },
     });
+  };
 
-    const removePreloader = () => {
-      //   const dispatch = createEventDispatcher();
-      //   dispatch("removePreloader");
-    };
+  const removePreloader = () => {
+    isLoadingPreloader.set(false);
   };
 </script>
 

@@ -1,13 +1,4 @@
-<script context="module" lang="ts">
-  export const removePreloader = () => {
-    gsap.to("#preloader", {
-      display: "none",
-    });
-  };
-</script>
-
 <script lang="ts">
-  import gsap from "gsap";
   import { onMount } from "svelte";
   import Countdown, {
     progressCountDown,

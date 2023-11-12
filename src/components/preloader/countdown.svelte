@@ -54,7 +54,7 @@
       duration: 0.3,
       //   clearProps: "all",
       ease: "none",
-      onComplete: onCallback, //check if is function
+      onComplete: onCallback, //@todo: check if is function
     });
   };
 
@@ -87,12 +87,15 @@
       const next3 = `#item-${item} #next3`;
 
       if (current - 1 == 0) {
+        // animate && set default
         animate(tl, [first1, first2, first3]);
       }
       if (item.length === 1) {
+        // animate 1 digit
         animate(tl, [current1, next1]);
       }
       if (item.length === 2) {
+        // animate 2 digits
         const list = [first1, first2, current1, next1, next2];
         if (item.length === currentItem.length) {
           list.push(current2);
@@ -100,6 +103,7 @@
         animate(tl, list);
       }
       if (item.length === 3) {
+        // animate 3 digits
         const list = [
           first1,
           first2,
