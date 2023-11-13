@@ -23,7 +23,7 @@
 
   let isMobile = false;
   let height = 500;
-  const heightMobile = "84vh";
+  const heightMobile = "84svh";
 
   if (browser) {
     isMobile = window.innerWidth < 500;
@@ -90,7 +90,7 @@
 
 <div
   bind:this={body}
-  class={`w-[350px] sm:w-full relative opacity-0 h-[500px] sm:h-[84vh] bg-black overflow-hidden`}
+  class={`w-[350px] sm:w-full relative opacity-0 h-[500px] sm:h-[84svh] bg-black overflow-hidden`}
 >
   <div
     id="first-overlay"
