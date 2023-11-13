@@ -12,7 +12,7 @@
 
 <div
   id="preloader"
-  class="w-screen h-screen fixed z-10 bg-black overflow-hidden"
+  class="w-screen h-screen sm:h-[100svh] fixed z-10 bg-black overflow-hidden"
 >
   <div class="w-full h-full flex justify-center relative">
     <div class="flex items-center justify-center">
