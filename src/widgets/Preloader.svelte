@@ -19,7 +19,7 @@
     <div class="absolute m-5 top-0"><Slider /></div>
   </div>
   <!--  -->
-  <div class="absolute sm:left-5 sm:bottom-5 left-[100px] bottom-[100px]">
+  <div class="absolute sm:left-5 sm:bottom-[5vh] left-[100px] bottom-[100px]">
     <h3 class="text-primary text-[50px] leading-[.8em]">
       DAMI <br />LARE
     </h3>

@@ -23,6 +23,7 @@
 
   let isMobile = false;
   let height = 500;
+  const heightMobile = "85vh";
 
   if (browser) {
     isMobile = window.innerWidth < 500;
@@ -49,7 +50,7 @@
 
       if (count > 0) {
         tl.to(`#${item.id}`, {
-          y: -height,
+          y: isMobile ? `-${heightMobile}` : -height,
           ease: "power3.in",
         });
       }
@@ -60,7 +61,7 @@
 
   const removeFirstOverlay = (tl: gsap.core.Timeline) => {
     tl.to("#first-overlay", {
-      y: -height,
+      y: isMobile ? `-${heightMobile}` : -height,
       duration: 1,
       ease: "power3.in",
     });
@@ -68,7 +69,7 @@
 
   const addLastOverlay = (tl: gsap.core.Timeline) => {
     tl.to("#last-overlay", {
-      y: -height * count,
+      y: isMobile ? `-${heightMobile}` : -height * count,
       duration: 1,
       ease: "power3.in",
 
@@ -85,7 +86,7 @@
 
 <div
   bind:this={body}
-  class={`w-[350px] sm:w-full relative opacity-0 h-[${height}px] sm:h-[85vh] bg-black overflow-hidden`}
+  class={`w-[350px] sm:w-full relative opacity-0 h-[${height}px] sm:h-[${heightMobile}] bg-black overflow-hidden`}
 >
   <div
     id="first-overlay"
