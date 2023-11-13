@@ -55,9 +55,9 @@
         });
       }
 
-      if (count == images.length - 1) {
-        return;
-      }
+      // if (count == images.length - 1) {
+      //   return;
+      // }
 
       count++;
     }, 200);
