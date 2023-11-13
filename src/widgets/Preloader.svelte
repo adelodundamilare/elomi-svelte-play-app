@@ -19,13 +19,18 @@
       <Countdown />
     </div>
     <div
-      class="absolute p-5 w-full h-full flex sm:block items-center justify-center"
+      class="absolute p-5 pb-0 w-full h-full flex sm:block items-center justify-center"
     >
       <Slider />
+      <h3 class="hidden sm:block py-5 text-primary text-[50px] leading-[.8em]">
+        DAMI <br />LARE
+      </h3>
     </div>
   </div>
   <!--  -->
-  <div class="absolute sm:left-5 sm:bottom-5 left-[100px] bottom-[100px]">
+  <div
+    class="sm:hidden absolute sm:left-5 sm:bottom-5 left-[100px] bottom-[100px]"
+  >
     <h3 class="text-primary text-[50px] leading-[.8em]">
       DAMI <br />LARE
     </h3>
