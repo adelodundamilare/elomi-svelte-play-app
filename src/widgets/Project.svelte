@@ -15,7 +15,7 @@
   const projects: IProject[] = [
     {
       title: "Money In Minute - Landing Page",
-      category: "Web Development/\nWordpress",
+      category: "Web Development/Frontend",
       link: "https://moneyinminutes.ng/",
     },
     {
@@ -30,12 +30,12 @@
     },
     {
       title: "Business Africa Online - News Mag",
-      category: "Web Development/\nWordpress",
+      category: "Web Development/Frontend",
       link: "http://businessafricaonline.com/",
     },
     {
       title: "OrewaCity - Real Estate Website",
-      category: "Web Development/\nWordpress",
+      category: "Web Development/\nFrontend",
       link: "https://app.orewacity.com/",
     },
   ];

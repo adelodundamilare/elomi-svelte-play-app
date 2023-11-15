@@ -13,7 +13,7 @@
 >
   <div class="flex sm:flex-col">
     <div class="w-2/3 sm:w-full sm:mb-20">
-      <h5 class="uppercase text-sm mb-10">Awards X <br />Recognition</h5>
+      <h5 class="uppercase text-sm mb-10">Goals X <br />Aspirations</h5>
       <div class="max-w-[450px]">
         {#each items as item}
           <p
