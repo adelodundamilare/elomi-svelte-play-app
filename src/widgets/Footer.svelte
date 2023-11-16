@@ -32,9 +32,9 @@
     <div
       class="flex sm:my-10 sm:flex-wrap sm:items-start sm:space-x-0 sm:space-y-0 items-center space-x-5"
     >
-      <Button className="sm:ml-0 sm:mt-0 sm:m-5 " text="Twitter" />
-      <Button text="LinkedIn" className="" />
-      <Button className="sm:m-0" text="Github" />
+      <Button link="https://twitter.com/daammilare" className="sm:ml-0 sm:mt-0 sm:m-5 " text="Twitter" />
+      <Button link="https://www.linkedin.com/in/adelodun-damilare" text="LinkedIn" className="" />
+      <Button link="https://github.com/adelodundamilare/" className="sm:m-0" text="Github" />
     </div>
     <p>credit: seyi.dev</p>
   </div>
