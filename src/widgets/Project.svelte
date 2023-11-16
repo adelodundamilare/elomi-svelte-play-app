@@ -24,19 +24,24 @@
       link: "https://mualine.ng/",
     },
     {
+      title: "Vortex - Customer & Admin Web App",
+      category: "Fintech/Fullstack",
+      link: "https://moneyinminutes.ng/",
+    },
+    {
       title: "Arnergy Bluebox - 3D Model",
       category: "3D Exploration/\nCreative Development",
       link: "https://arnergy-3d-bluebox.netlify.app/",
     },
     {
-      title: "Business Africa Online - News Mag",
-      category: "Web Development/Frontend",
-      link: "http://businessafricaonline.com/",
-    },
-    {
       title: "OrewaCity - Real Estate Website & App",
       category: "Web Development/\nFrontend",
       link: "https://app.orewacity.com/",
+    },
+    {
+      title: "Business Africa Online - News Mag",
+      category: "Web Development/Frontend",
+      link: "http://businessafricaonline.com/",
     },
   ];
 
