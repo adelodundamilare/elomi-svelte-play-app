@@ -34,7 +34,7 @@
       link: "http://businessafricaonline.com/",
     },
     {
-      title: "OrewaCity - Real Estate Website",
+      title: "OrewaCity - Real Estate Website & App",
       category: "Web Development/\nFrontend",
       link: "https://app.orewacity.com/",
     },
