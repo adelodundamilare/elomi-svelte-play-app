@@ -26,7 +26,7 @@
     {
       title: "Vortex - Customer & Admin Web App",
       category: "Fintech/Fullstack",
-      link: "https://moneyinminutes.ng/",
+      link: "https://app.workwithvortex.com/login",
     },
     {
       title: "Arnergy Bluebox - 3D Model",
