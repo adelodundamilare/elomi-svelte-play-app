@@ -19,6 +19,11 @@
       link: "https://moneyinminutes.ng/",
     },
     {
+      title: "Arike - Personal Site",
+      category: "Web App Development",
+      link: "https://arike.netlify.app",
+    },
+    {
       title: "Mualine - Vendor Booking App",
       category: "Web Development/\nLaravel",
       link: "https://mualine.ng/",
