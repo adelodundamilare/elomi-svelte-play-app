@@ -14,14 +14,14 @@
 
   const projects: IProject[] = [
     {
+      title: "Arike Personal Site - Exploring Subtle Animation",
+      category: "Web App Development",
+      link: "https://arike.netlify.app",
+    },
+    {
       title: "Money In Minute - Landing Page",
       category: "Web Development/Frontend",
       link: "https://moneyinminutes.ng/",
-    },
-    {
-      title: "Arike - Personal Site",
-      category: "Web App Development",
-      link: "https://arike.netlify.app",
     },
     {
       title: "Mualine - Vendor Booking App",
